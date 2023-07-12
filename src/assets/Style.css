@@ -1,0 +1,36 @@
+#slidingImage{
+    animation: entry 1s ease;
+    transition:opacity .1s ease, transform 3s ease;
+}
+#Blinking{
+    animation: entry 10s ease;
+    transition:opacity .5s ease, transform 4s ease;
+}
+@keyframes entry{
+    0%{
+        transform: translateX(4);
+         opacity:0.8;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+    
+}
+
+.background {
+    background-color: #005eb8;
+    background-image: radial-gradient(650px circle at 0% 0%,
+        #005eb8 15%,
+        #034f969c 35%,
+        #0662b88b 75%,
+        #005eb8 80%,
+        transparent 100%),
+      radial-gradient(1250px circle at 100% 100%,
+        #043869b2 15%,
+        #044684 35%,
+        #005fb8b5 75%,
+        #005fb8e1 80%,
+        transparent 100%);
+        
+  }
