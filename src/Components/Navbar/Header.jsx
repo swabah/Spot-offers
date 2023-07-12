@@ -35,7 +35,7 @@ const Header = () => {
           {navigations.map((navigation, index) => (
             <li
               key={index}
-              className="font-semibold text-sm md:text-base hover:text-[#030a19] tracking-wider  transition-all duration-200 ease-in cursor-pointer"
+              className="font-semibold text-xs md:text-sm hover:text-[#030a19] tracking-wider  uppercase transition-all duration-200 ease-in cursor-pointer"
             >
               {navigation.option === 'About' ? (
                 <Link
