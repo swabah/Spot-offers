@@ -36,14 +36,16 @@ function Newsletter() {
   };
 
   return (
-    <div className="background h-screen md:h-[680px] flex flex-col items-center justify-center px-2 md:px-5 xl:px-32">
-      <h1 className="mb-8 md:mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-[hsl(218,81%,95%)]">
+    <div id='Contact' className="bg-[#0d1d39] h-screen md:h-[680px] flex flex-col items-center justify-center px-2 md:px-5 xl:px-32">
+      <div className='flex flex-col items-center justify-center'>
+
+      <h1 className="mb-8 md:mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-[#e8effd]">
         Do not miss <br />
-        <span className="text-[#0d1d39]">any updates</span>
+        <span className="text-[#005eb8]">any updates</span>
       </h1>
       {loading ? (<h2 className='animate-spin transition-all text-3xl text-white'><AiOutlineLoading/></h2> ): 
       <>
-      <form onSubmit={handleOnSubmit} className="border-t-4 border-[#0d1d39]  w-64 md:w-80 xl:w-96  flex items-center bg-[#0d1d393a] relative">
+      <form onSubmit={handleOnSubmit} className="border-t-4 border-[#005eb8]  w-full  flex items-center bg-[#3b5a8f3a] relative">
         <input
           required
           type="email"
@@ -60,6 +62,7 @@ function Newsletter() {
         </button>
       </form>
       </> }
+      </div>
     </div>
   );
 }

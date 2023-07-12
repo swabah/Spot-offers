@@ -1,30 +1,33 @@
 
-import Imgicon from '../../assets/Imgicon'
+import { FaFacebook,  FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import {} from 'react-icons/cg'
+import { CgMail } from 'react-icons/cg';
 
 const Footer = () => {
   return (
-    <footer id='Contact' className='bg-gray-50 pt-12 text-[#005eb8] '>
-      <div className="py-8 flex flex-col md:flex-row items-start justify-between space-y-5 md:space-y-0 px-2 md:px-5 xl:px-32">
-        <div className='flex flex-col space-y-5 items-start'>
-          <h2 className="text-2xl leading-8 tracking-wide md:text-3xl lg:text-4xl font-extrabold capitalize">Got a Project? <br /> Let's Get to Work</h2>
-          <p className='leading-6 md:leading-7 text-sm md:text-base brightness-50'>
-            <span className='font-semibold text-lg md:text-xl '>DataHex Digital Solution</span> <br />
-            3rd Floor, Hilite Business Park <br />
-            Calicut, Kerala <br />
-            673001</p>
-        </div>
-        <div className='font-medium h-full'>
-          <Imgicon/>
-        </div>
-      </div>
-      <div className=' text-sm md:text-base  border-t-4 flex items-start justify-between py-4 px-2 md:px-5 xl:px-32'>
-        <div className='font-semibold tracking-wider'>
-          <h2>mail@datanex.in</h2>
-          <h2>+91 6238 274 734</h2>
-        </div>
-        <span >made by  <span className='font-bold cursor-pointer'>sw_abah</span> </span>
-      </div>
-    </footer>
+    <footer class="bg-gray-100 text-[#0d1d39] py-8 px-2 md:px-5 xl:px-32">
+  <div class="container flex flex-col md:flex-row text-start space-y-4 md:space-y-0  py-5 justify-between">
+    <div class="w-full md:w-1/2 lg:w-1/4">
+      <h3 class="text-3xl font-bold mb-4">Stay Connected</h3>
+      <ul class="text-lg space-y-1">
+        <li className=''><a className='flex items-center ' href="mailto: spotoffers786@gmail.com"><span className='mr-2 text-xl'><CgMail/></span>Mail for enquiry</a></li>
+        <li className=''><a className='flex items-center ' href="#"><span className='mr-2 text-xl'><FaFacebook/></span>Join our Facebook community</a></li>
+        <li className=''><a className='flex items-center ' href="#"><span className='mr-2 text-xl'><FaWhatsapp/></span>Join our Whatsapp community</a></li>
+        <li className=''><a className='flex items-center ' href="#"><span className='mr-2 text-xl'><FaTelegram/></span>Join our Telegram community</a></li>
+        <li className=''><a className='flex items-center ' href="https://www.instagram.com/_spotoffers_"><span className='mr-2 text-xl'><FaInstagram/></span>Follow us on Instagram </a></li>
+      </ul>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/4 md:px-4">
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+      <p class="text-lg">If you have any questions or concerns, feel free to reach out to our customer support team.</p>
+    </div>
+  </div>
+  <hr />
+  <div class="container mt-8 text-center ">
+    <p class="text-sm">© 2023 Spot Offers. All rights reserved. | Disclaimer: Spot Offers is not affiliated with Amazon or any other platforms mentioned. We are an independent platform that aggregates deals and discounts from various sources.</p>
+  </div>
+</footer>
+
   );
 };
 

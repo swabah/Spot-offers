@@ -25,17 +25,17 @@ const Header = () => {
    window.addEventListener('scroll' , Navfix)
 
   return (
-    <div id="header" className={`w-full ${fix ? 'bg-white shadow-md text-[#0d1d39] ' : "bg-transparent hover:text-white text-white"} ${ navOpen && 'fixed top-0'}  fixed top-0 flex justify-center z-40 items-center px-2 md:px-5 xl:px-32`}>
+    <div id="header" className={`w-full ${fix ? 'bg-white shadow-md text-[#0d1d39] ' : "bg-transparent hover:text-white text-white"} ${ navOpen && 'fixed top-0'}  fixed top-0 flex justify-center z-40 items-center px-2 md:px-5 xl:px-32 `}>
       <div className="w-full flex  h-14 md:h-16 lg:h-20 justify-between items-center ">
         <div  className='w-44 '>
-          <h2 className='capitalize text-xl md:text-2xl font-extrabold'>Offers gram</h2>
+          <h2 className='capitalize text-2xl md:text-3xl font-extrabold'>Spot Offers</h2>
         </div>
 
         <ul className="md:flex hidden space-x-7 ">
           {navigations.map((navigation, index) => (
             <li
               key={index}
-              className="font-semibold text-xs md:text-sm hover:text-[#030a19] tracking-wider  uppercase transition-all duration-200 ease-in cursor-pointer"
+              className="font-semibold text-sm md:text-base hover:text-[#030a19] tracking-wider uppercase transition-all duration-200 ease-in cursor-pointer"
             >
               {navigation.option === 'About' ? (
                 <Link
@@ -91,29 +91,29 @@ const Header = () => {
         <div className="w-fit md:hidden ">
           {navOpen ? (
             <CgClose
-              className="text-[30px] font-bold text-[#40b6ad] cursor-pointer"
+              className={`text-[30px] ${fix ? 'text-[#0d1d39]' : "text-[#fff]"} font-bold text-[#fff] cursor-pointer`}
               onClick={() => setNavOpen(false)}
             />
           ) : (
             <CgMenuRightAlt
-              className="text-[30px] font-bold text-[#40b6ad] cursor-pointer"
+              className={`text-[30px] ${fix ? 'text-[#0d1d39]' : "text-[#fff]"} font-bold text-[#fff] cursor-pointer`}
               onClick={() => setNavOpen(true)}
             />
           )}
         </div>
 
       </div>
-        <div className={`md:hidden w-full bg-white flex justify-center z-50 absolute mt-[1rem]`}>
+        <div className={`md:hidden w-full h-auto  flex justify-center z-50 absolute `}>
           <ul
-            className={`flex flex-col absolute bg-gray-50 border-b-4 border-[#40b6ad] py-4 w-full  transition-all text-start duration-1000 ${
-              navOpen ? 'top-[1rem]' : 'top-[-480px] -z-50'
+            className={`flex flex-col absolute bg-white border-b border-[#0d1d39] py-4 w-full h-screen top-7 transition-all text-start duration-1000 ${
+              navOpen ? 'flex' : 'hidden -z-50'
             }`}
           >
             {navigations.map((navigation, index) => (
               <li
                 key={index}
                 onClick={() => setNavOpen(false)}
-                className="py-1 hover:bg-blue-100 text-[#40b6ad] active:bg-blue-100 font-semibold px-2"
+                className="py-1.5 hover:bg-blue-50 text-[#0d1d39] active:bg-blue-100 uppercase font-semibold px-2"
               >
                 {navigation.option === 'About' ? (
                   <Link

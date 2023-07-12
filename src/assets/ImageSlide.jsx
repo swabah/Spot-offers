@@ -34,7 +34,7 @@ function ImageSlide() {
   }, 5000);
        
  return (
-   <div className='w-full h-96'>
+   <div className='w-full h-auto'>
       {images.map((slide,index)=>{
        return (
          <div key={index}>
@@ -44,7 +44,7 @@ function ImageSlide() {
            {number.map((num,index) => {
               if (current === index) {
               return (
-                  <h2 className='absolute font-extrabold text-4xl lg:text-5xl text-white right-3 lg:right-3 lg:bottom-3 brightness-150 opacity-70 bottom-1.5'>{num}</h2>
+                  <h2 className='absolute font-extrabold text-4xl lg:text-5xl text-white right-3 lg:right-3 lg:bottom-1.5 brightness-150 opacity-70 bottom-1.5'>{num}</h2>
                  )
               }
             })}

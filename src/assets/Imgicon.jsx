@@ -11,11 +11,11 @@ function Imgicon() {
   ];
 
   return (
-    <div className='flex md:flex-col space-x-3 md:space-x-0 md:space-y-10 z-10'>
+    <div className='flex space-x-3 pt-5 z-10'>
       {imgs.map((img, index) => (
         <a href={img.link} key={index}>
           <img
-            className='w-10 p-1.5 rounded-xl border-2 bg-white inner-shadow hover:scale-105 transition-all'
+            className='w-10 p-1.5 rounded-xl border-0 bg-white bg-opacity-90 shadow-sm brightness-75 inner-shadow hover:scale-105 transition-all'
             src={img.logo}
             alt=''
           />
