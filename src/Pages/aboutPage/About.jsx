@@ -3,12 +3,12 @@ import about from '../../assets/img/bg/about.jpg'
 
 function About() {
   return (
-    <div id='About' style={{backgroundImage: `url(${about})`}} className='flex flex-col w-full h-screen bg-cover py-8 md:py-12 xl:py-32 pb-5 relative lg:pb-12 bg-no-repeat bg-center items-start  px-2 lg:px-5 xl:px-32'>
+    <div id='About' style={{backgroundImage: `url(${about})`}} className='flex flex-col w-full h-screen bg-cover py-8 md:py-12 xl:py-32 pb-5 relative lg:pb-12 bg-no-repeat bg-center items-start  px-3 lg:px-5 xl:px-32'>
       <div className='z-10 w-full h-full text-white'>
-        <div className='w-full  mt-20 relative'>
-            <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide'>Welcome to `OFFERSGRAM`</h2>
+        <div className='w-full  mt-10 md:mt-20 relative'>
+            <h2 className='text-3xl md:text-3xl lg:text-4xl font-semibold tracking-wide'>Welcome to `OFFERSGRAM`</h2>
         </div>
-            <p className='indent-8 text-lg mt-20 capitalize tracking-wide w-full  text-start'>
+            <p className='indent-8 text-sm  md:text-lg pt-10 md:pt-20 capitalize tracking-wide w-full  text-start'>
               At Offers Gram, we are dedicated to bringing you the best deals, discounts, and offers from various online platforms. We understand that finding the right deals can be time-consuming and overwhelming, so our mission is to make your shopping experience easier, more affordable, and more enjoyable.
               Our team of dedicated deal finders scours the internet to curate a wide range of offers across different categories, including electronics, fashion, home goods, beauty, travel, and more. We partner with reputable online platforms, including Amazon and other affiliate programs, to provide you with a diverse selection of products at discounted prices.</p>
       </div>

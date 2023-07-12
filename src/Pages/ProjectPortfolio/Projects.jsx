@@ -8,7 +8,7 @@ function Projects() {
              Introducing Project Portfolio
             <span className='before:block before:mt-3 before:h-0.5 md:before:h-1 before:w-20 before:bg-[#4185c6]'></span>
       </h2>  */}
-      <h2 className='text-2xl md:text-3xl lg:text-4xl mt-20 font-semibold tracking-wide'>Project Portfolio</h2>
+      <h2 className='text-2xl text-[#0d1d39] md:text-3xl lg:text-4xl mt-24 font-semibold tracking-wide'>Project Portfolio</h2>
       <div className="w-full h-auto pt-8 md:py-14">
       <ImageSlide/>
       </div>

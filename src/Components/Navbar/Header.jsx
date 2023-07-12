@@ -25,17 +25,17 @@ const Header = () => {
    window.addEventListener('scroll' , Navfix)
 
   return (
-    <div id="header" className={`w-full ${fix ? 'bg-white shadow-md text-[#005eb8] hover:text-[#005fb8b6]' : "bg-transparent hover:text-white text-white"} ${ navOpen && 'fixed top-0'}  fixed top-0 flex justify-center z-40 items-center px-2 md:px-5 xl:px-32`}>
+    <div id="header" className={`w-full ${fix ? 'bg-white shadow-md text-[#0d1d39] ' : "bg-transparent hover:text-white text-white"} ${ navOpen && 'fixed top-0'}  fixed top-0 flex justify-center z-40 items-center px-2 md:px-5 xl:px-32`}>
       <div className="w-full flex  h-14 md:h-16 lg:h-20 justify-between items-center ">
-        <div  className='w-32 md:w-36 lg:w-44 '>
-          <h2 className='capitalize text-2xl font-extrabold'>Offers gram</h2>
+        <div  className='w-44 '>
+          <h2 className='capitalize text-xl md:text-2xl font-extrabold'>Offers gram</h2>
         </div>
 
         <ul className="md:flex hidden space-x-7 ">
           {navigations.map((navigation, index) => (
             <li
               key={index}
-              className="font-semibold text-sm md:text-base  tracking-wider  transition-all duration-200 ease-in cursor-pointer"
+              className="font-semibold text-sm md:text-base hover:text-[#030a19] tracking-wider  transition-all duration-200 ease-in cursor-pointer"
             >
               {navigation.option === 'About' ? (
                 <Link
@@ -91,12 +91,12 @@ const Header = () => {
         <div className="w-fit md:hidden ">
           {navOpen ? (
             <CgClose
-              className="text-[25px] font-bold text-[#40b6ad] cursor-pointer"
+              className="text-[30px] font-bold text-[#40b6ad] cursor-pointer"
               onClick={() => setNavOpen(false)}
             />
           ) : (
             <CgMenuRightAlt
-              className="text-[25px] font-bold text-[#40b6ad] cursor-pointer"
+              className="text-[30px] font-bold text-[#40b6ad] cursor-pointer"
               onClick={() => setNavOpen(true)}
             />
           )}

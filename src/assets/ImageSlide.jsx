@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './Style.css'
-import homImg1 from './img/portfolio/one.png' 
-import homImg2 from './img/portfolio/two.png' 
-import homImg3 from './img/portfolio/three.png' 
-import homImg4 from './img/portfolio/four.png' 
+import homImg1 from './img/portfolio/one.jpg' 
+import homImg2 from './img/portfolio/two.jpg' 
+import homImg3 from './img/portfolio/three.jpg' 
+import homImg4 from './img/portfolio/four.jpg' 
 
 function ImageSlide() {
   const images = [
@@ -19,10 +19,10 @@ function ImageSlide() {
   '4'
  ]
   const Contents = [
-    'User Experience (ux) Design',
-    'Digital Marketing',
-   'Digital Strategy',
-   'Digital Transformation',
+    'Deal Aggregation',
+    'Exclusive Discounts',
+   'User-Friendly Interface',
+   'Community Engagement and Reviews',
  ];
  const [current,setCurrent]=useState(0)
    const length = images.length
@@ -44,7 +44,7 @@ function ImageSlide() {
            {number.map((num,index) => {
               if (current === index) {
               return (
-                  <h2 className='absolute font-extrabold text-4xl lg:text-5xl text-white right-2 lg:right-3 lg:bottom-3 brightness-150 opacity-70 bottom-1.5'>{num}</h2>
+                  <h2 className='absolute font-extrabold text-4xl lg:text-5xl text-white right-3 lg:right-3 lg:bottom-3 brightness-150 opacity-70 bottom-1.5'>{num}</h2>
                  )
               }
             })}
