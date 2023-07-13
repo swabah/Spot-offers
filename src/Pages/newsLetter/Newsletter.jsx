@@ -6,9 +6,9 @@ import { FaArrowRight } from 'react-icons/fa';
 import {AiOutlineLoading} from 'react-icons/ai'
 
 function Newsletter() {
-  const SERVICE_ID = 'service_8gh1eek';
-  const TEMPLATE_ID = 'template_appqgwa';
-  const ID = 'qQiiYM7KIuDBrtTuy';
+  const SERVICE_ID = 'service_kuh42dq';
+  const TEMPLATE_ID = 'template_fmlwxas';
+  const ID = '0rXcb8Z74c5Lx6Xss';
   const [loading, setLoading] = useState(false);
 
   const handleOnSubmit = async (e) => {

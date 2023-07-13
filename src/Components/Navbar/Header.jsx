@@ -113,7 +113,7 @@ const Header = () => {
               <li
                 key={index}
                 onClick={() => setNavOpen(false)}
-                className="py-1.5 hover:bg-blue-50 text-[#0d1d39] active:bg-blue-100 uppercase font-semibold px-2"
+                className={`py-1.5 hover:bg-blue-50 ${fix ? 'text-[#0d1d39]' : 'text-white '}  active:bg-blue-100 uppercase font-semibold px-2`}
               >
                 {navigation.option === 'About' ? (
                   <Link

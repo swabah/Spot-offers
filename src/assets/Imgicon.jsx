@@ -5,13 +5,13 @@ import logoicon3 from './img/icons/logoicon3.png';
 
 function Imgicon() {
   const imgs = [
-    { logo: logoicon1, link: 'https://datahex.in/' },
-    { logo: logoicon2, link: '' },
-    { logo: logoicon3, link: 'https://www.instagram.com/data.hex/' },
+    { logo: logoicon1, link: 'https://spot-offers.vercel.app/' },
+    { logo: logoicon2, link: '#' },
+    { logo: logoicon3, link: 'https://www.instagram.com/_spotoffers_/' },
   ];
 
   return (
-    <div className='flex space-x-3 pt-5 z-10'>
+    <div className='flex space-x-3 md:space-x-5 pt-5 z-10'>
       {imgs.map((img, index) => (
         <a href={img.link} key={index}>
           <img
