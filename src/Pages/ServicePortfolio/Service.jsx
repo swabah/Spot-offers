@@ -1,17 +1,16 @@
 import React from 'react'
 import ImageSlide from '../../assets/ImageSlide'
-import { GoInfo } from 'react-icons/go'
 
-function Projects() {
+function Service() {
   return (
-    <div id='Project' className='px-2 md:px-5 xl:px-32 h-auto py-12 md:py-16 lg:py-24 w-full'>
-      <h2 className='text-2xl text-[#0d1d39] md:text-3xl lg:text-4xl  font-semibold tracking-wide'>Project Portfolio</h2>
+    <div id='Service' className=' px-3 md:px-10 lg:px-10 xl:px-32 h-auto py-12 md:py-16 lg:py-24 w-full'>
+      <h2 className='text-2xl text-[#0d1d39] md:text-3xl lg:text-4xl  font-semibold xl:font-extrabold tracking-wide'>Service Portfolio</h2>
       <div className="w-full h-full py-8 md:py-14">
       <ImageSlide/>
       </div>
       <hr />
       <div className='w-full h-full pt-8 md:pt-14'>
-        <h2 className='text-2xl text-[#0d1d39] md:text-3xl lg:text-4xl font-semibold tracking-tight'>Why Choose Spot Offers?</h2>
+        <h2 className='text-2xl text-[#0d1d39] md:text-3xl lg:text-4xl font-semibold xl:font-extrabold tracking-tight'>Why Choose Spot Offers?</h2>
         <ul className='mt-5 lg:mt-10 w-full h-full text-start space-y-2 md:space-y-4 font-medium text-sm md:text-lg lg:text-xl'>
           <li className='text-[#0d1d39]'> <span className='text-[#000] font-bold md:font-semibold'>Deals:</span> Spot Offers provides a wide range of discounts and offers from various online platforms, helping users find the best bargains.</li>
           <li className='text-[#0d1d39]'> <span className='text-[#000] font-bold md:font-semibold'>Discounts:</span> Spot Offers offers exclusive savings through discounts and coupon codes, providing users with unique and special offers.</li>
@@ -24,4 +23,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default Service

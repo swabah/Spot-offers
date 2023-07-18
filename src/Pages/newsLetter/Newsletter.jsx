@@ -36,7 +36,7 @@ function Newsletter() {
   };
 
   return (
-    <div id='Contact' className="bg-[#0d1d39] h-screen md:h-[680px] flex flex-col items-center justify-center px-2 md:px-5 xl:px-32">
+    <div id='Contact' className="bg-[#0d1d39] h-screen md:h-[680px] flex flex-col items-center justify-center  px-3 md:px-10 lg:px-10 xl:px-32">
       <div className='flex flex-col items-center justify-center'>
 
       <h1 className="mb-8 md:mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-[#e8effd]">

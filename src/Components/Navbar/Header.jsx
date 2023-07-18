@@ -1,177 +1,92 @@
 import React, { useState } from 'react';
-import {  CgMenuRightAlt,  CgClose } from 'react-icons/cg';
-import logo from '../../assets/img/Logo.png';
 import { Link } from 'react-scroll';
+import { CgClose, CgMenuRightAlt } from 'react-icons/cg';
 
-const Header = () => {
+function Header() {
   const [navOpen, setNavOpen] = useState(false);
-
+  const [fix, setFix] = useState(false);
+  
   const navigations = [
     { option: 'Home', path: 'Home' },
     { option: 'About', path: 'About' },
-    { option: 'Project', path: 'Projects' },
+    { option: 'Service', path: 'Service' },
     { option: 'Contact', path: 'Contact' }
   ];
 
-  
-  const [fix, setfix] = useState(false);
-   const Navfix = () =>{
-      if (window.scrollY >= 100) {
-        setfix(true)
-      }else (
-        setfix(false)
-      ) 
-   }
-   window.addEventListener('scroll' , Navfix)
+  const Navfix = () => {
+    if (window.scrollY >= 400) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  };
+
+  window.addEventListener('scroll', Navfix);
 
   return (
-    <div id="header" className={`w-full ${fix ? 'bg-white shadow-md text-[#0d1d39] ' : "bg-transparent hover:text-white text-white"} ${ navOpen && 'fixed top-0'}  fixed top-0 flex justify-center z-40 items-center px-2 md:px-5 xl:px-32 `}>
-      <div className="w-full flex  h-14 md:h-16 lg:h-20 justify-between items-center ">
-        <div  className='w-44 '>
-          <h2 className='capitalize text-2xl md:text-3xl font-extrabold'>Spot Offers</h2>
+    <div className={`w-full h-auto  px-3 md:px-10 lg:px-10 xl:px-32 py-2 z-50 ${fix ? ' bg-white fixed left-0 top-0 shadow-lg drop-shadow-md  py-5 mdpy-6' : 'md:py-8  text-[#0d1d39] bg-transparent '}`}>
+      <div className="flex items-center justify-between   w-full h-full">
+        <div  className='w-auto '>
+          <h2 className=' text-2xl md:text-3xl lg:text-4xl  uppercase font-extrabold'>Spot Offers</h2>
         </div>
-
-        <ul className="md:flex hidden space-x-7 ">
+        <ul className="xl:flex hidden space-x-7">
           {navigations.map((navigation, index) => (
             <li
               key={index}
-              className="font-semibold text-sm md:text-base hover:text-[#030a19] tracking-wider uppercase transition-all duration-200 ease-in cursor-pointer"
+              className={`font-semibold text-sm md:text-base hover:text-[#030a198b] tracking-wider uppercase transition-all duration-200 ease-in cursor-pointer`}
             >
-              {navigation.option === 'About' ? (
-                <Link
-                  activeClass="active"
-                  to="About"
-                  spy={true}
-                  smooth={true}
-                  offset={-90}
-                  duration={800}
-                >
-                  {navigation.option}
-                </Link>
-              ) : navigation.option === 'Home' ? (
-                <Link
-                  activeClass="active"
-                  to="Home"
-                  spy={true}
-                  smooth={true}
-                  offset={-150}
-                  duration={500}
-                >
-                  {navigation.option}
-                </Link>
-              ) : navigation.option === 'Project' ? (
-                <Link
-                  activeClass="active"
-                  to="Project"
-                  spy={true}
-                  smooth={true}
-                  offset={-150}
-                  duration={500}
-                >
-                  {navigation.option}
-                </Link>
-              ) : navigation.option === 'Contact' ? (
-                <Link
-                  activeClass="active"
-                  to="Contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-150}
-                  duration={500}
-                >
-                  {navigation.option}
-                </Link>
-              ) : (
-                <Link to={navigation.path}>{navigation.option}</Link>
-              )}
+              <Link
+                activeClass="active"
+                to={navigation.path}
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+              >
+                {navigation.option}
+              </Link>
             </li>
           ))}
         </ul>
-
-        <div className="w-fit md:hidden ">
-          {navOpen ? (
-            <CgClose
-              className={`text-[30px] ${fix ? 'text-[#0d1d39]' : "text-[#fff]"} font-bold text-[#fff] cursor-pointer`}
-              onClick={() => setNavOpen(false)}
-            />
-          ) : (
-            <CgMenuRightAlt
-              className={`text-[30px] ${fix ? 'text-[#0d1d39]' : "text-[#fff]"} font-bold text-[#fff] cursor-pointer`}
-              onClick={() => setNavOpen(true)}
-            />
-          )}
+        <div className="w-fit xl:hidden">
+          <CgMenuRightAlt
+            className={`text-[30px] lg:text-[40px] ${fix ? 'text-[#0d1d39]' : 'text-[#0d1d39]'} font-bold cursor-pointer`}
+            onClick={() => setNavOpen(true)}
+          />
         </div>
-
       </div>
-        <div className={`md:hidden w-full h-auto  flex justify-center z-50 absolute `}>
-          <ul
-            className={`flex flex-col absolute bg-white border-b border-[#0d1d39] py-4 w-full h-screen top-7 transition-all text-start duration-1000 ${
-              navOpen ? 'flex' : 'hidden -z-50'
-            }`}
-          >
-            {navigations.map((navigation, index) => (
-              <li
-                key={index}
-                onClick={() => setNavOpen(false)}
-                className={`py-1.5 hover:bg-blue-50 ${fix ? 'text-[#0d1d39]' : 'text-white '}  active:bg-blue-100 uppercase font-semibold px-2`}
-              >
-                {navigation.option === 'About' ? (
-                  <Link
-                    activeClass="active"
-                    to="About"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {navigation.option}
-                  </Link>
-                ) : navigation.option === 'Home' ? (
-                  <Link
-                    activeClass="active"
-                    to="Home"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {navigation.option}
-                  </Link>
-                ) : navigation.option === 'Project' ? (
-                  <Link
-                    activeClass="active"
-                    to="Project"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {navigation.option}
-                  </Link>
-                ) : navigation.option === 'Contact' ? (
-                  <Link
-                    activeClass="active"
-                    to="Contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {navigation.option}
-                  </Link>
-                ) : (
-                  <Link to={navigation.path}>{navigation.option}</Link>
-                )}
-              </li>
-            ))}
-          </ul>
+      <div className={`xl:hidden w-full md:w-1/2 lg:w-1/2 md:shadow-lg h-screen ${navOpen ? 'flex opacity-100' : 'hidden opacity-0 -z-50  '} bg-white py-4  px-3 md:px-10 lg:px-10 xl:px-32 md:py-12  flex-col border-b border-[#0d1d39] justify-start items-start z-50 right-0 top-0 md:right-0 absolute`}>
+        <div className="flex items-center justify-between md:justify-end w-full h-auto">
+           <h2 className='md:hidden text-2xl uppercase font-extrabold'>Spot Offers</h2>
+          <CgClose
+            className={`text-[30px] lg:text-[35px] ${fix ? 'text-[#0d1d39]' : 'text-[#0d1d39]'} hover:text-[#605e5e79] font-bold  cursor-pointer`}
+            onClick={() => setNavOpen(false)}
+          />
         </div>
+
+        <ul className={`flex flex-col items-start justify-start space-y-4 py-8 w-full h-full transition-all text-start duration-1000`}>
+          {navigations.map((navigation, index) => (
+            <li
+              key={index}
+              className={`font-semibold text-sm md:text-base hover:text-[#605e5e79] text-[#000000bb] tracking-wider text-start uppercase transition-all duration-200 ease-in cursor-pointer`}
+            >
+              <Link
+                activeClass="active"
+                to={navigation.path}
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                onClick={() => setNavOpen(false)}
+              >
+                {navigation.option}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-};
+}
 
 export default Header;
