@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/Style.css';
 import Header from '../../Components/Navbar/Header';
-import bgHome from '../../assets/img/bg/Homebg.png';
+import bgBag from '../../assets/img/bg/bgBag.png';
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
             <p className='text-sm md:text-xl tracking-wide opacity-80'>Wide Range of Choices</p>
           </div>
           <div className='w-auto md:w-1/2 h-auto px-5 md:px-0'>
-            <img src={bgHome} className='w-full h-full bgHome-bounce' alt="" />
+            <img src={bgBag} className='w-full h-full bgBag-bounce' alt="" />
           </div>
         </div>
       </div>
